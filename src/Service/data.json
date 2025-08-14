@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Shirt",
+    "description": "Red shirt size M short sleeve",
+    "price": 4500,
+    "createdDate": "2025-05-13 19:49:02 UTC",
+    "img": "Shirt.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Adidas shoes",
+    "description": "Adidas shoes are light and comfortable.",
+    "price": 60,
+    "createdDate": "2025-08-13 19:49:02 UTC",
+    "img": "Shoes.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Shorts",
+    "description": "Shorts with pockets",
+    "price": 250,
+    "createdDate": "2025-08-13 07:49:02 UTC",
+    "img": "Short.webp"
+  },
+  {
+    "id": 4,
+    "name": "Socks",
+    "description": "Socks color gray and white",
+    "price": 32,
+    "createdDate": "2023-05-13 19:49:02 UTC",
+    "img": "Socks.webp"
+  },
+  {
+    "id": 5,
+    "name": "Bracelet",
+    "description": "Silver link bracelet",
+    "price": 34,
+    "createdDate": "2025-06-13 19:49:02 UTC",
+    "img": "Bracelet.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Necklace",
+    "description": "Gold diamond necklace",
+    "price": 46,
+    "createdDate": "2024-05-13 19:49:02 UTC",
+    "img": "Necklace.webp"
+  }
+]

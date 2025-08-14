@@ -1,0 +1,149 @@
+.title {
+    background-color: grey;
+    text-align: left;
+    padding: 10px;
+
+    h2 {
+        margin: unset;
+        margin-left: 15px;
+    }
+}
+
+.header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+
+    button {
+        margin-right: 20px;
+    }
+
+    .wrapperFilter {
+        display: flex;
+        align-items: center;
+        width: 270px;
+
+        label {
+            margin-right: 15px;
+        }
+    }
+}
+
+button.button:hover {
+    background-color: #6b8d6b;
+}
+
+button.button {
+    height: 35px;
+    width: 85px;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 0px 3px #6b8d6b;
+    cursor: pointer;
+    border-color: #6b8d6b;
+}
+
+.error {
+    font-weight: bold;
+    color: red;
+}
+
+.products-wrapper {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    align-items: flex-start;
+    margin-top: 30px;
+
+    .form-product {
+        height: 550px;
+        padding: 20px;
+        border-radius: 10px;
+        margin-left: 20px;
+        width: 35%;
+        border: 1px solid grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div:has(button) {
+            align-self: end;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        .dx-button-has-icon:hover {
+            background-color: unset;
+        }
+
+        .dx-button-has-icon {
+            border: unset;
+            background-color: unset !important;
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .dx-textbox {
+            width: 80%;
+        }
+
+        .dx-numberbox {
+            width: 20%;
+        }
+
+        textArea {
+            height: 70px;
+        }
+    }
+
+    .products-list {
+        .product:hover {
+            box-shadow: 0px 0px 5px grey;
+            background-color: #f1eded;
+            cursor: pointer;
+        }
+
+        .pagination .dx-button-has-icon {
+            border: unset;
+            background-color: unset;
+            margin: 0px 15px;
+        }
+
+        .pagination .dx-button-has-icon:hover {
+            background-color: #f1eded;
+        }
+
+        .product {
+            img {
+                width: 80px;
+                height: 80px;
+                margin-right: 15px;
+            }
+
+            .details-product {
+                width: 90%;
+                display: flex;
+                align-items: center
+            }
+
+            align-items: flex-end;
+            height: 80px;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid grey
+        }
+
+        gap: 20px;
+        display: grid;
+        width: 60%
+    }
+}
