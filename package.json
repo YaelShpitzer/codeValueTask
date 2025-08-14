@@ -21,7 +21,7 @@
     "redux-persist": "^6.0.0",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {1
+  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
