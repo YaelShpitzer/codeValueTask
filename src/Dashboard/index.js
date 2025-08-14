@@ -26,9 +26,9 @@ const Dashboard = () => {
         let productsList = [...products]
         if (filterValue) productsList = productsList.filter(product => (product?.name?.toUpperCase().includes(filterValue.toUpperCase())
             || product?.description?.toUpperCase()?.includes(filterValue.toUpperCase())))
-        if (sortBy === 1) productsList = productsList?.sort((a, b) => a.name.localeCompare(b.name))
-        else if (sortBy === 2) productsList = productsList?.sort((a, b) => new Date(a.createdDate) - new Date(b.createdDate))
-        return productsList.slice((page - 1) * 5, page * 5)
+        if(!sortBy) return productsList
+        if (sortBy === 1) return productsList?.sort((a, b) => a.name.localeCompare(b.name))
+        else return productsList?.sort((a, b) => new Date(a.createdDate) - new Date(b.createdDate))
     }, [products, sortBy, filterValue, page])
 
     useEffect(() => {
@@ -107,7 +107,7 @@ const Dashboard = () => {
         </div>
         <div className='products-wrapper'>
             <div className='products-list'>
-                {sortData.map((product, index) =>
+                {sortData.slice((page - 1) * 5, page * 5).map((product, index) =>
                     <div key={index} className='product'>
                         <div className='details-product' onClick={() => handleSelectProduct(product)}>
                             <img src={product.img ? require(`../Assets/img/${product.img}`) : ''} alt={product.img} />
@@ -119,10 +119,10 @@ const Dashboard = () => {
                         <button className="button" onClick={() => handleDeleteProduct(product)}>Delete</button>
                     </div>
                 )}
-                {products?.length > 5 && <div className='pagination'>
+                {sortData?.length > 5 && <div className='pagination'>
                     <Button text="Prev" icon="chevronleft" disabled={page === 1} onClick={() => handlePagin(-1) }/>
-                    <span>{`${page} of ${Math.ceil(products.length / 5)}`}</span>
-                    <Button text="Next" icon="chevronnext" disabled={page === Math.ceil(products.length / 5)} onClick={() => handlePagin(+1)} />
+                    <span>{`${page} of ${Math.ceil(sortData.length / 5)}`}</span>
+                    <Button text="Next" icon="chevronnext" disabled={page === Math.ceil(sortData.length / 5)} onClick={() => handlePagin(+1)} />
                 </div>}
             </div>
             {(isShowForm || params?.id) && <Form product={selectedProduct} hideForm={() => setIsShowForm(false)} />}
